@@ -1,0 +1,11 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+    - name: Install binaries
+      yum: name={{ item }} state=latest
+      with_items:
+        - vim
+        - git
+        - wget
+        - gcc
