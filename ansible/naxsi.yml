@@ -48,7 +48,7 @@
     - name: Copy naxsi rules file
       copy: src=../config_files/naxsi.rules dest=/etc/nginx/naxsi.rules
     - name: Copy nginx sysconfig file
-      copy: src=../config_files/sysconfig-nginx.conf dest=/etc/sysconfig/nginx
+      copy: src=../config_files/sysconfig-nginx dest=/etc/sysconfig/nginx
     - name: Copy nginx init script
       copy: src=../config_files/init_nginx dest=/etc/init.d/nginx mode=0755
     - name: Add nginx service
