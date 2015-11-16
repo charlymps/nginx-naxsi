@@ -9,3 +9,19 @@
         - git
         - wget
         - gcc
+        - make
+        - automake
+        - autoconf
+        - libtool
+        - pcre
+        - pcre-devel
+        - libxml2
+        - libxml2-devel
+        - curl
+        - curl-devel
+        - httpd-devel
+        - openssl-devel
+    - name: Add nginx group
+      group: name=nginx
+    - name: Add nginx user
+      user: name=nginx comment="Nginx web server" shell=/sbin/nologin home=/var/lib/nginx group=nginx
