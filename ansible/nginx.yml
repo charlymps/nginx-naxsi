@@ -43,6 +43,10 @@
       file: path=/var/cache/nginx state=directory owner=nginx group=nginx mode=700
     - name: Copy nginx configuration file
       copy: src=../config_files/nginx.conf dest=/etc/nginx/nginx.conf
+    - name: Copy naxsi core rules file
+      copy: src=../config_files/naxsi_core.rules dest=/etc/nginx/naxsi_core.rules
+    - name: Copy naxsi rules file
+      copy: src=../config_files/naxsi.rules dest=/etc/nginx/naxsi.rules
     - name: Copy nginx sysconfig file
       copy: src=../config_files/sysconfig-nginx.conf dest=/etc/sysconfig/nginx
     - name: Copy nginx init script
